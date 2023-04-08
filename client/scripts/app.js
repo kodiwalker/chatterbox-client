@@ -8,22 +8,22 @@ var App = {
 
   username: 'anonymous',
 
-  initialize: function() {
-    App.username = window.location.search.substr(10);
+  initialize: function () {
+    App.username = window.location.search.substr(10); //^ sets username prop
 
-    FormView.initialize();
-    RoomsView.initialize();
-    MessagesView.initialize();
+    FormView.initialize(); //^ sets up submit button handler
+    RoomsView.initialize(); //^ renders lobby
+    MessagesView.initialize(); //^ renders feed
 
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
 
-    // TODO: Make sure the app loads data from the API
-    // continually, instead of just once at the start.
+    // TODO: Make sure the app loads data from the API continually, instead of just once at the start.
+
   },
 
-  fetch: function(callback = ()=>{}) {
+  fetch: function (callback = () => { }) {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
@@ -33,12 +33,12 @@ var App = {
     });
   },
 
-  startSpinner: function() {
+  startSpinner: function () {
     App.$spinner.show();
     FormView.setStatus(true);
   },
 
-  stopSpinner: function() {
+  stopSpinner: function () {
     App.$spinner.fadeOut('fast');
     FormView.setStatus(false);
   }
