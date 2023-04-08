@@ -5,7 +5,7 @@
 var Messages = {
 
   // TODO: Define how you want to store your messages.
-  _data: {}
+  _data: null
   //^ array of message objs, or object of message objs with keys of usernames
   //^ [{username: '', text: '', roomname: ''},{},{}]
   //^ {kode: [{username: 'kode', text: '', roomname: ''},{},{}], scooby: [{},{}], shaggy: [{}]}

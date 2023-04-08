@@ -22,11 +22,12 @@ var FormView = {
       roomname: $("#lobby").val()
     };
 
+
+    //sends our input message to server
     Parse.create(message, (data) => {
       console.log(data);
     });
-    //save the message (username, text, roomname)
-    //send this message to the server
+
     //after sending to server, current message will display along with other messages from server
 
     console.log('click!');
