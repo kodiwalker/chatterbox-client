@@ -20,6 +20,7 @@ var MessagesView = {
 
     var renderedMsg = MessageView.render(Messages._data[0]);
     console.log(renderedMsg);
+    MessagesView.$chats.empty();
     for (var i = 0; i < Messages._data.length; i++) {
       MessagesView.$chats.append(MessagesView.renderMessage(Messages._data[i]));
     }

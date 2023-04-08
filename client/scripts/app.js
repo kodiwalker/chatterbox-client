@@ -18,6 +18,9 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+    //This refreshes the messages every 10 seconds
+    setInterval(function () { App.fetch(App.stopSpinner); }, 10000);
+
 
     // TODO: Make sure the app loads data from the API continually, instead of just once at the start.
 
